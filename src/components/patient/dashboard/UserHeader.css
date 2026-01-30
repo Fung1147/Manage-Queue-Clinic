@@ -1,0 +1,32 @@
+.user-header-container {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    border: 1px solid #f3f4f6;
+    align-items: center;
+}
+
+.logo {
+    padding: 10px;
+}
+
+.mode {
+    padding: 10px;
+}
+
+.info-user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}

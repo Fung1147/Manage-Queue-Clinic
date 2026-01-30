@@ -1,0 +1,44 @@
+.queue-card {
+    background-color: white;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #f3f4f6;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.queue-header {
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.status-calling {
+  background-color: #22c55e;
+}
+
+.status-waiting {
+  background-color: #facc15; 
+  color: #854d0e; 
+}
+
+.queue-body {
+    padding: 24px;
+}
+
+.queue-number {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 8px;
+    color: #1f2937;
+}
+
+.doctor-badge {
+    display: inline-block;
+    background-color: #f3f4f6;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
