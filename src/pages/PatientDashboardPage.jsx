@@ -6,7 +6,7 @@ import "../css/PatientDashboard.css"
 
 const PatientDashboardPage = () => {
   const user = {
-    name: "ธนธรณ์",
+    name: "ธนธรณ์ ธนภาสภากร",
     imageUrl: "https://i.pravatar.cc/150?img=11",
   };
 
@@ -14,7 +14,7 @@ const PatientDashboardPage = () => {
     number: "A102",
     doctor: "นพ.รักษา ยาดี",
     waitingCount: 3,
-    status: "calling"
+    status: "wating"
   })
 
   return (
