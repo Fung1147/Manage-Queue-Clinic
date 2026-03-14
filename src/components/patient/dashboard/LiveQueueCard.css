@@ -1,44 +1,91 @@
+/* --- Container --- */
 .queue-card {
-    background-color: white;
-    border-radius: 16px;
-    text-align: center;
-    border: 1px solid #f3f4f6;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background-color: white;
+  border-radius: 20px; /* เพิ่มความมนให้ดู modern */
+  text-align: center;
+  border: 1px solid #eaecf0; /* สีขอบจางลงให้ดูคลีน */
+  /* เงา 2 ชั้น ให้ดูนุ่มลึก */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+              0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  
+  /* สำคัญ! ป้องกันสี header ทะลุออกนอกมุมมน */
+  overflow: hidden; 
+  
+  /* เพิ่ม Animation ตอน Hover */
+  transition: all 0.3s ease; 
 }
 
+.queue-card:hover {
+  transform: translateY(-4px); /* ลอยขึ้นนิดนึง */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Header & Status --- */
 .queue-header {
-    padding: 10px;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
+  padding: 12px 16px; /* เพิ่มพื้นที่หายใจ */
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px; /* เพิ่มระยะห่างตัวอักษรนิดนึงให้อ่านง่าย */
+  text-transform: uppercase; /* ตัวพิมพ์ใหญ่ทั้งหมดให้ดูเป็นทางการ (Optional) */
 }
 
+/* สถานะ: รอเรียก (สีเหลืองอำพัน อ่านง่ายกว่า) */
+.status-waiting {
+  background-color: #fffbeb; /* พื้นเหลืองอ่อนมากๆ */
+  color: #b45309; /* ตัวหนังสือสีน้ำตาลเข้ม */
+  border-bottom: 2px solid #fcd34d; /* เพิ่มขอบล่างให้ดูมีน้ำหนัก */
+}
+
+/* สถานะ: กำลังเรียก (สีเขียวสดใส) */
 .status-calling {
   background-color: #22c55e;
+  color: white;
+  /* เพิ่ม animation กระพริบเบาๆ ให้รู้ว่าเรียกอยู่ */
+  animation: pulse-green 2s infinite; 
 }
 
-.status-waiting {
-  background-color: #facc15; 
-  color: #854d0e; 
-}
-
+/* --- Body --- */
 .queue-body {
-    padding: 24px;
+  padding: 32px 24px; /* เพิ่ม padding บนล่างให้เลขดูเด่น */
 }
 
 .queue-number {
-    font-size: 48px;
-    font-weight: bold;
-    margin: 8px;
-    color: #1f2937;
+  font-size: 56px; /* ใหญ่ขึ้นอีกนิด */
+  font-weight: 800; /* หนาพิเศษ */
+  margin: 0; /* ลบ margin เดิมแล้วใช้ gap หรือ padding แทนจะคุมง่ายกว่า */
+  color: #111827;
+  line-height: 1;
+  font-variant-numeric: tabular-nums; /* ทำให้ตัวเลขกว้างเท่ากัน (เลขไม่ดิ้นเวลาเปลี่ยน) */
 }
 
+.queue-wait-count {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+/* --- Badge --- */
 .doctor-badge {
-    display: inline-block;
-    background-color: #f3f4f6;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 14px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+  display: inline-flex; /* จัดให้อยู่กึ่งกลางแนวนอน */
+  align-items: center;
+  gap: 6px; /* ระยะห่างถ้าใส่ icon */
+  
+  background-color: #f3f4f6;
+  color: #374151;
+  
+  padding: 8px 20px; /* ยาวขึ้นนิดนึง */
+  border-radius: 9px; /* Pill shape (แคปซูล) */
+  
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 24px;
+  border: 1px solid #e5e7eb; /* ขอบบางๆ */
+}
+
+/* --- Keyframes for Animation (Optional) --- */
+@keyframes pulse-green {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
 }

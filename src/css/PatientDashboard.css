@@ -3,7 +3,8 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 96vh;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 main {

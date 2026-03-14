@@ -1,20 +1,69 @@
+/* --- Container หลัก --- */
 .footer-container {
-    margin: 10px;
+  margin-top: 30px; /* เว้นห่างจากส่วนบัตรคิวข้างบน */
+  padding: 0 10px;  /* เว้นขอบซ้ายขวานิดหน่อย */
 }
 
+/* --- หัวข้อ (Header) --- */
 .head-footer {
-    margin: 10px;
-    margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #334155;     /* สีเทาเข้มดูแพง */
+  margin-bottom: 16px; /* เว้นช่องว่างก่อนถึงเมนู */
+  padding-left: 5px;   /* ขยับให้ตรงกับขอบการ์ด */
 }
 
+/* --- กล่องรวมเมนู (Grid Layout) --- */
 .footer-content {
-    margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* แบ่งเป็น 2 คอลัมน์เท่ากัน */
+  gap: 16px; /* ระยะห่างระหว่างปุ่ม */
 }
 
-.item-1 {
-    margin: 10px;
+/* --- ตัวปุ่มเมนู (Common Style) --- */
+.menu-item {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px 15px;
+  
+  display: flex;
+  flex-direction: column; /* จัดไอคอนกับตัวหนังสือแนวตั้ง */
+  align-items: center;    /* จัดกึ่งกลาง */
+  justify-content: center;
+  
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02); /* เงาบางๆ */
+  cursor: pointer;
+  transition: all 0.2s ease; /* เอฟเฟกต์ตอนกด */
 }
 
-.item-2 {
-    margin: 10px;
+/* เอฟเฟกต์ตอนเอาเมาส์ชี้ หรือแตะ */
+.menu-item:hover {
+  transform: translateY(-3px); /* ลอยขึ้น */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08); /* เงาเข้มขึ้น */
+  border-color: #bfdbfe; /* ขอบเปลี่ยนสีฟ้าจางๆ */
+}
+
+/* --- ตกแต่งไอคอน --- */
+.menu-item .icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+  background-color: #f8fafc; /* พื้นหลังวงกลมรองไอคอน */
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+/* --- ตกแต่งตัวหนังสือ --- */
+.menu-item span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+}
+
+/* --- (Optional) ถ้าอยากให้ Item-2 เด่นกว่า หรือสีต่างกัน --- */
+.item-2 .icon {
+  background-color: #ecfdf5; /* สีพื้นหลังไอคอนเขียวอ่อน */
 }

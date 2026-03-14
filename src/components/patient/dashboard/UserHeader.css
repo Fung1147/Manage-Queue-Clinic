@@ -1,32 +1,93 @@
+/* --- Container หลัก --- */
 .user-header-container {
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    border: 1px solid #f3f4f6;
-    align-items: center;
+  background-color: rgba(255, 255, 255, 0.95); /* ขาวโปร่งแสงนิดๆ */
+  backdrop-filter: blur(10px); /* เอฟเฟกต์เบลอพื้นหลังเหมือน iOS */
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 12px 20px; /* เพิ่มระยะขอบไม่ให้ติดจอเกินไป */
+  
+  /* Sticky Header: ให้เมนูติดอยู่ข้างบนเวลาเลื่อนดูคิว */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* ให้ลอยอยู่เหนือทุกอย่าง */
+  
+  /* เงาแบบนุ่มนวล (Soft Shadow) */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #f1f5f9;
 }
 
+/* --- โลโก้ --- */
 .logo {
-    padding: 10px;
+  font-size: 20px;
+  font-weight: 800; /* หนาพิเศษ */
+  color: #2563eb;   /* สีน้ำเงินการแพทย์ */
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.mode {
-    padding: 10px;
+.logo-icon {
+  font-size: 24px;
 }
 
+/* --- ส่วนข้อมูล User --- */
 .info-user {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px; /* ระยะห่างระหว่างชื่อกับรูป */
+  
+  /* เพิ่ม Hover ให้ดูรู้ว่ากดไปดูโปรไฟล์ได้ */
+  padding: 4px 8px;
+  border-radius: 30px;
+  transition: background-color 0.2s;
+  cursor: pointer;
 }
 
+.info-user:hover {
+  background-color: #f8fafc; /* พื้นหลังสีเทาจางๆ ตอนเอาเมาส์ชี้ */
+}
+
+/* --- จัดการข้อความชื่อ --- */
+.text-container {
+  display: flex;
+  flex-direction: column; /* จัดชื่อให้อยู่บรรทัดล่าง */
+  align-items: flex-end;  /* ชิดขวา */
+}
+
+.welcome-text {
+  font-size: 10px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #334155;
+}
+
+/* --- รูปโปรไฟล์ --- */
 .profile-img {
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
+  width: 48px;  /* ลดขนาดลงนิดนึง 60px ใหญ่ไปสำหรับ Header */
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  
+  /* เพิ่มขอบวงแหวน 2 ชั้น ให้ดูมีมิติ */
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px #e2e8f0; /* วงแหวนสีเทา */
+}
+
+/* --- (แถม) Badge สำหรับ Dev Mode --- */
+.mode-badge {
+  background-color: #fee2e2;
+  color: #991b1b;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
 }

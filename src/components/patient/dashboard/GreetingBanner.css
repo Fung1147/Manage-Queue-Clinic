@@ -1,0 +1,57 @@
+.greeting-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px dashed #cbd5e1;
+  margin-top: 50px;
+}
+
+.icon-wrapper {
+  font-size: 40px;
+  margin-bottom: 10px;
+  background-color: #eff6ff;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.greeting-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #334155;
+  margin: 10px 0 5px 0;
+}
+
+.greeting-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.book-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.book-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.book-btn:active {
+  transform: translateY(0);
+}

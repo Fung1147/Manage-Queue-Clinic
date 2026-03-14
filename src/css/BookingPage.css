@@ -1,0 +1,119 @@
+/* BookingPage.css */
+.booking-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.booking-title {
+  margin-bottom: 10px;
+}
+
+.patient-info {
+  margin-bottom: 20px;
+  color: #4b5563;
+}
+
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ---------------- Card Styles ---------------- */
+.schedule-card {
+  border: 2px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.schedule-card:hover:not(.disabled) {
+  border-color: #93c5fd;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-card.selected {
+  background-color: #e0f2fe;
+  border-color: #0284c7;
+}
+
+.schedule-card.disabled {
+  background-color: #f9f9f9;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ---------------- Card Layout ---------------- */
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-title {
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.schedule-card.disabled .time-title {
+  color: #999;
+}
+
+.doctor-info {
+  margin: 0;
+  color: #666;
+  font-size: 0.95em;
+}
+
+/* ---------------- Status Section ---------------- */
+.status-section {
+  text-align: right;
+}
+
+.status-text.closed,
+.status-text.full {
+  color: #dc2626; /* สีแดง */
+  font-weight: bold;
+}
+
+.status-text.available {
+  color: #16a34a; /* สีเขียว */
+  font-weight: bold;
+}
+
+.count-info {
+  font-size: 0.85em;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* ---------------- Confirm Button ---------------- */
+.confirm-btn {
+  margin-top: 30px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.confirm-btn.active {
+  background-color: #0284c7;
+  color: white;
+  cursor: pointer;
+}
+
+.confirm-btn.active:hover {
+  background-color: #0369a1;
+}
+
+.confirm-btn:disabled {
+  background-color: #ccc;
+  color: white;
+  cursor: not-allowed;
+}

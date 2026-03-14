@@ -4,30 +4,50 @@ import PatientDashboardPage from "./pages/PatientDashboardPage";
 import NurseDashboardPage from "./pages/NurseDashboardPage";
 import DoctorDashboardPage from "./pages/DoctorDashboardPage";
 import AdminDashboardPage from "./pages/AdminDashboardPage";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import BookingPage from "./pages/BookingPage";
+
+const DevModeBar = () => {
+  const navigate = useNavigate();
+
+  return (
+    <div
+      style={{
+        background: "#333",
+        color: "white",
+        padding: "10px",
+        display: "flex",
+        gap: "10px",
+      }}
+    >
+      <span>🔧 Dev Mode: Switch Role </span>
+      <button onClick={() => navigate("/patient")}>Patient</button>
+      <button onClick={() => navigate("/nurse")}>Nurse</button>
+      <button onClick={() => navigate("/doctor")}>Doctor</button>
+      <button onClick={() => navigate("/admin")}>Admin</button>
+    </div>
+  );
+};
 
 function App() {
 
-  const [currentRole, setCurrentRole] = useState('')
-
   return (
-    <>
-      <div style={{background: '#333', color: 'white', padding: '10px', display: 'flex', gap: '10px'}}>
-        <span>🔧 Dev Mode: Switch Role </span>
-        <button onClick={()=> setCurrentRole('patient')}>Patient</button>
-        <button onClick={()=> setCurrentRole('nurse')}>Nurse</button>
-        <button onClick={()=> setCurrentRole('doctor')}>Doctor</button>
-        <button onClick={()=> setCurrentRole('admin')}>Admin</button>
-      </div>
+    <BrowserRouter>
+      <DevModeBar />
 
-      {currentRole === 'patient' && <PatientDashboardPage />}
+      <Routes>
+        <Route path="/" element={<div style={{padding: "20px"}}>Dev Mode ด้านบน 👆</div>}/>
 
-      {currentRole === 'nurse' && <NurseDashboardPage />}
-
-      {currentRole === 'doctor' && <DoctorDashboardPage />}
-
-      {currentRole === 'admin' && <AdminDashboardPage />}
-      
-    </>
+        {/* กลุ่มหน้าของ Patient */}
+        <Route path="/patient" element={<PatientDashboardPage />} />
+        <Route path="/patient/booking" element={<BookingPage />} />
+        
+        {/* กลุ่มหน้าของ Role พนักงาน */}
+        <Route path="/nurse" element={<NurseDashboardPage />} />
+        <Route path="/doctor" element={<DoctorDashboardPage />} />
+        <Route path="/admin" element={<AdminDashboardPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

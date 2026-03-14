@@ -1,20 +1,24 @@
 import "./UserHeader.css";
 
-const UserHeader = ({ name, imageUrl }) => {
+const UserHeader = ({ name }) => {
   return (
-    <div>
-      <div className="user-header-container">
-        <div className="info-user">
-          <img className="profile-img" src={imageUrl} />
-          <div>
-            <p>ยินดีต้อนรับ</p>
-            <h2>{name}</h2>
-          </div>
-        </div>
-
-        <div className="mode">mode</div>
+    <header className="user-header-container">
+      {/* 1. โลโก้ หรือ ชื่อแอป */}
+      <div className="logo">
+        <span className="logo-icon">🏥</span> MyClinic
       </div>
-    </div>
+
+      {/* (Optional) โหมด Developer ใส่ Badge เล็กๆ ไว้ */}
+      {/* <div className="mode-badge">Dev Mode</div> */}
+
+      {/* 2. ข้อมูลผู้ใช้ */}
+      <div className="info-user">
+        <div className="text-container">
+          <span className="welcome-text">ยินดีต้อนรับ,</span>
+          <span className="user-name">{name}</span>
+        </div>
+      </div>
+    </header>
   );
 };
 export default UserHeader;
