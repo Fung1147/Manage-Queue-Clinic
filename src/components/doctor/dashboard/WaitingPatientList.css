@@ -1,0 +1,39 @@
+.empty-waiting {
+  color: #64748b;
+  text-align: center;
+  padding: 20px;
+}
+
+.waiting-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.waiting-table th {
+  background-color: #f1f5f9;
+  text-align: left;
+  padding: 12px 15px;
+  color: #333;
+}
+
+.waiting-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.waiting-table tr:last-child td {
+  border-bottom: none;
+}
+
+.waiting-queue-no {
+  font-weight: bold;
+  color: #475569;
+}
+
+.waiting-symptoms {
+  color: #64748b;
+}

@@ -1,0 +1,17 @@
+.doctor-header {
+  background-color: #0284c7;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.doctor-header-title {
+  margin: 0;
+}
+
+.doctor-header-subtitle {
+  margin: 5px 0 0 0;
+  font-size: 1em;
+  opacity: 0.9;
+}

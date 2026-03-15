@@ -51,6 +51,64 @@ export const MOCK_USERS = [
   },
 ];
 
+export const MOCK_DOCTOR = [
+  {
+    doctor_id: 201,
+    account_id: 201,
+    first_name: "นพ.รักษา",
+    last_name: "ยาดี",
+    sex: "ชาย",
+    email: "luxsa@email.com",
+    phone: "0825019888",
+    role: "Doctor",
+    employee_id: "DOC101",
+    position: "General Practitioner",
+    license_no: "DT111"
+  },
+  {
+    doctor_id: 202,
+    account_id: 202,
+    first_name: "พญ.ใจดี",
+    last_name: "มีเมตตา",
+    sex: "หญิง",
+    email: "jaidee@email.com",
+    phone: "0812345678",
+    role: "Doctor",
+    employee_id: "DOC102",
+    position: "Pediatrician",
+    license_no: "DT222"
+  },
+  {
+    doctor_id: 203,
+    account_id: 203,
+    first_name: "นพ.สมเกียรติ",
+    last_name: "มือทอง",
+    sex: "ชาย",
+    email: "somkiat@email.com",
+    phone: "0898765432",
+    role: "Doctor",
+    employee_id: "DOC103",
+    position: "Surgeon",
+    license_no: "DT333"
+  }
+];
+
+export const MOCK_NURSE = [
+  {
+    nurse_id: 301,
+    account_id: 301,
+    first_name: "พยาบาลสมหญิง",
+    last_name: "มือเบา",
+    sex: "หญิง",
+    email: "somying@email.com",
+    phone: "0833334444",
+    role: "Nurse",
+    employee_id: "NUR101",
+    position: "Head Nurse",
+    nursing_license: "RN999"
+  }
+];
+
 // จำลองข้อมูลจากตาราง Queue + Join กับข้อมูล Doctor
 export const MOCK_QUEUES = [
   {
@@ -65,6 +123,7 @@ export const MOCK_QUEUES = [
     booked_at: "2023-10-27T08:30:00",
     waiting_count: 0,
     doctor_name: "นพ.รักษา ยาดี",
+    doctor_id: 201
   },
   {
     queue_id: 1002,
@@ -74,10 +133,11 @@ export const MOCK_QUEUES = [
     first_name: "ธนธรณ์",
     last_name: "ธนภาสภากร",
     symptoms_initial: "ปวดหัว ตัวร้อน",
-    status: "calling",
+    status: "examining",
     booked_at: "2023-10-27T09:30:00",
     waiting_count: 0,
     doctor_name: "นพ.รักษา ยาดี",
+    doctor_id: 201
   },
   {
     queue_id: 1003,
@@ -87,10 +147,11 @@ export const MOCK_QUEUES = [
     first_name: "มานะ",
     last_name: "อดทนยิ่ง",
     symptoms_initial: "มีไข้สูง หนาวสั่น",
-    status: "waiting",
+    status: "screened",
     booked_at: "2023-10-27T09:45:00",
     waiting_count: 1,
     doctor_name: "นพ.รักษา ยาดี",
+    doctor_id: 201
   },
   {
     queue_id: 1004,

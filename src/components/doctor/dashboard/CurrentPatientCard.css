@@ -1,0 +1,68 @@
+.empty-state {
+  background-color: #f9fafb;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #64748b;
+}
+
+.empty-state h3 {
+  margin-top: 0;
+}
+
+.patient-card {
+  background-color: #fff;
+  border: 2px solid #0284c7;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.patient-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.queue-title {
+  margin: 0 0 10px 0;
+  color: #0284c7;
+}
+
+.patient-name {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.symptoms-box {
+  background-color: #f0f9ff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.symptoms-box p {
+  margin: 5px 0 0 0;
+  color: #333;
+}
+
+.btn-complete {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.btn-complete:hover {
+  background-color: #059669;
+}
