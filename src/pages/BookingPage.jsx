@@ -10,11 +10,18 @@ const BookingPage = () => {
 
   const [selectedSchedule, setSelectedSchedule] = useState(null);
 
+  const [symptoms, setSymptoms] = useState("");
+
   const handleConfirmBooking = () => {
-    if (selectedSchedule) return;
+    if (!selectedSchedule) return;
+
+    if (!symptoms.trim()) {
+      alert("กรุณาระบุอาการเบื้องต้นก่อนยืนยันการจองคิว");
+      return;
+    }
 
     const isConfirm = window.confirm(
-      `ยืนยันการจองคิว\nแพทย์: ${selectedSchedule.doctor_name}\nเวลา": ${selectedSchedule.start_time} - ${selectedSchedule.end_time} น.`,
+      `ยืนยันการจองคิว\nแพทย์: ${selectedSchedule.doctor_name}\nเวลา: ${selectedSchedule.start_time} - ${selectedSchedule.end_time} น.\nอาการเบื้องต้น: ${symptoms}`,
     );
 
     if (isConfirm) {
@@ -25,34 +32,35 @@ const BookingPage = () => {
 
   return (
     <div className="booking-container">
-      <button
-        onClick={() => navigate("/patient")}
-        style={{
-          marginBottom: "15px",
-          padding: "8px 15px",
-          cursor: "pointer",
-          borderRadius: "5px",
-          border: "1px solid #ccc",
-          background: "#fff",
-        }}
-      >
+      <button onClick={() => navigate("/patient")} className="btn-back">
         ⬅️ ย้อนกลับไปหน้าหลัก
       </button>
+
       <h2 className="booking-title">📅 เลือกเวลาจองคิวตรวจ</h2>
       <p className="patient-info">
         ผู้ป่วย: {currentUser?.first_name} {currentUser?.last_name}
       </p>
 
+      {/* ✅ 2. เพิ่มกล่องสำหรับกรอกอาการเบื้องต้น */}
+      <div className="symptoms-section">
+        <label className="symptoms-label">
+          📝 ระบุอาการเบื้องต้น (บังคับ):
+        </label>
+        <textarea
+          className="symptoms-input"
+          value={symptoms}
+          onChange={(e) => setSymptoms(e.target.value)}
+          placeholder="เช่น ปวดหัว มีไข้สูง ไอแห้ง..."
+        />
+      </div>
+
       <div className="schedule-list">
         {MOCK_SCHEDULES.map((schedule) => {
-          // ลอจิกเช็คสถานะ
           const isFull = schedule.current_count >= schedule.max_patients;
           const isClosed = !schedule.is_available;
           const isDisabled = isFull || isClosed;
           const isSelected =
             selectedSchedule?.schedule_id === schedule.schedule_id;
-
-          // ✅ จัดการเรื่อง Class ตามเงื่อนไข (Conditional Class Names)
           const cardClass = `schedule-card ${isDisabled ? "disabled" : ""} ${isSelected ? "selected" : ""}`;
 
           return (
@@ -72,8 +80,6 @@ const BookingPage = () => {
                 </div>
 
                 <div className="status-section">
-                  
-                  {/* แสดงสถานะคิว */}
                   {isClosed ? (
                     <span className="status-text closed">ปิดรับคิว</span>
                   ) : isFull ? (
@@ -95,9 +101,10 @@ const BookingPage = () => {
       </div>
 
       <button
-        className={`confirm-btn ${selectedSchedule ? "active" : ""}`}
+        // ✅ ปุ่มจะกดได้ก็ต่อเมื่อ เลือกเวลาแล้ว และ พิมพ์อาการแล้ว
+        className={`confirm-btn ${selectedSchedule && symptoms.trim() ? "active" : ""}`}
         onClick={handleConfirmBooking}
-        disabled={!selectedSchedule}
+        disabled={!selectedSchedule || !symptoms.trim()}
       >
         ยืนยันการจองเวลาที่เลือก
       </button>

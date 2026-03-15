@@ -1,0 +1,19 @@
+.nurse-header {
+  background-color: #0d9488;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nurse-header h2 {
+  margin: 0;
+}
+
+.nurse-header-info {
+  font-size: 1.1em;
+}

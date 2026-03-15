@@ -1,4 +1,3 @@
-/* BookingPage.css */
 .booking-container {
   padding: 20px;
   max-width: 600px;
@@ -20,7 +19,6 @@
   gap: 15px;
 }
 
-/* ---------------- Card Styles ---------------- */
 .schedule-card {
   border: 2px solid #ccc;
   padding: 15px;
@@ -46,7 +44,6 @@
   opacity: 0.6;
 }
 
-/* ---------------- Card Layout ---------------- */
 .card-content {
   display: flex;
   justify-content: space-between;
@@ -68,19 +65,18 @@
   font-size: 0.95em;
 }
 
-/* ---------------- Status Section ---------------- */
 .status-section {
   text-align: right;
 }
 
 .status-text.closed,
 .status-text.full {
-  color: #dc2626; /* สีแดง */
+  color: #dc2626;
   font-weight: bold;
 }
 
 .status-text.available {
-  color: #16a34a; /* สีเขียว */
+  color: #16a34a;
   font-weight: bold;
 }
 
@@ -90,7 +86,6 @@
   margin-top: 5px;
 }
 
-/* ---------------- Confirm Button ---------------- */
 .confirm-btn {
   margin-top: 30px;
   width: 100%;
@@ -116,4 +111,51 @@
   background-color: #ccc;
   color: white;
   cursor: not-allowed;
+}
+
+.symptoms-section {
+  margin-bottom: 20px;
+  background-color: #f8fafc;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.symptoms-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #334155;
+}
+
+.symptoms-input {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #cbd5e1;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 1em;
+  resize: vertical; 
+}
+
+.symptoms-input:focus {
+  outline: none;
+  border-color: #0284c7;
+  box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.2);
+}
+
+.btn-back {
+  margin-bottom: 15px;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #fff;
+  transition: background-color 0.2s;
+}
+
+.btn-back:hover {
+  background-color: #f1f5f9;
 }

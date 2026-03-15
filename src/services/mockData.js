@@ -63,7 +63,7 @@ export const MOCK_DOCTOR = [
     role: "Doctor",
     employee_id: "DOC101",
     position: "General Practitioner",
-    license_no: "DT111"
+    license_no: "DT111",
   },
   {
     doctor_id: 202,
@@ -76,7 +76,7 @@ export const MOCK_DOCTOR = [
     role: "Doctor",
     employee_id: "DOC102",
     position: "Pediatrician",
-    license_no: "DT222"
+    license_no: "DT222",
   },
   {
     doctor_id: 203,
@@ -89,8 +89,8 @@ export const MOCK_DOCTOR = [
     role: "Doctor",
     employee_id: "DOC103",
     position: "Surgeon",
-    license_no: "DT333"
-  }
+    license_no: "DT333",
+  },
 ];
 
 export const MOCK_NURSE = [
@@ -105,8 +105,8 @@ export const MOCK_NURSE = [
     role: "Nurse",
     employee_id: "NUR101",
     position: "Head Nurse",
-    nursing_license: "RN999"
-  }
+    nursing_license: "RN999",
+  },
 ];
 
 // จำลองข้อมูลจากตาราง Queue + Join กับข้อมูล Doctor
@@ -123,7 +123,7 @@ export const MOCK_QUEUES = [
     booked_at: "2023-10-27T08:30:00",
     waiting_count: 0,
     doctor_name: "นพ.รักษา ยาดี",
-    doctor_id: 201
+    doctor_id: 201,
   },
   {
     queue_id: 1002,
@@ -137,7 +137,7 @@ export const MOCK_QUEUES = [
     booked_at: "2023-10-27T09:30:00",
     waiting_count: 0,
     doctor_name: "นพ.รักษา ยาดี",
-    doctor_id: 201
+    doctor_id: 201,
   },
   {
     queue_id: 1003,
@@ -147,11 +147,11 @@ export const MOCK_QUEUES = [
     first_name: "มานะ",
     last_name: "อดทนยิ่ง",
     symptoms_initial: "มีไข้สูง หนาวสั่น",
-    status: "screened",
+    status: "screening",
     booked_at: "2023-10-27T09:45:00",
     waiting_count: 1,
     doctor_name: "นพ.รักษา ยาดี",
-    doctor_id: 201
+    doctor_id: 201,
   },
   {
     queue_id: 1004,
@@ -183,7 +183,7 @@ export const MOCK_QUEUES = [
 
 export const MOCK_SCHEDULES = [
   {
-    schedule_id: 502,
+    schedule_id: 501,
     doctor_id: 201,
     doctor_name: "นพ.รักษา ยาดี", // Join มาจาก User
     date: "2023-10-27",
@@ -195,7 +195,7 @@ export const MOCK_SCHEDULES = [
     is_available: true,
   },
   {
-    schedule_id: 501,
+    schedule_id: 502,
     doctor_id: 201,
     doctor_name: "นพ.รักษา ยาดี",
     date: "2023-10-27",
@@ -203,7 +203,7 @@ export const MOCK_SCHEDULES = [
     end_time: "11:00",
     room_no: "1",
     max_patients: 5,
-    current_count: 2,
+    current_count: 4,
     is_available: true,
   },
   {
@@ -216,6 +216,42 @@ export const MOCK_SCHEDULES = [
     room_no: "1",
     max_patients: 5,
     current_count: 0,
-    is_available: false, // ปิดสล็อตนี้
+    is_available: false,
+  },
+  {
+    schedule_id: 504,
+    doctor_id: 201,
+    doctor_name: "นพ.รักษา ยาดี",
+    date: "2023-10-27",
+    start_time: "12:00",
+    end_time: "13:00",
+    room_no: "1",
+    max_patients: 5,
+    current_count: 1,
+    is_available: true, 
+  },
+  {
+    schedule_id: 505,
+    doctor_id: 201,
+    doctor_name: "นพ.รักษา ยาดี",
+    date: "2023-10-27",
+    start_time: "13:00",
+    end_time: "14:00",
+    room_no: "1",
+    max_patients: 5,
+    current_count: 2,
+    is_available: true,
+  },
+  {
+    schedule_id: 506,
+    doctor_id: 201,
+    doctor_name: "นพ.รักษา ยาดี",
+    date: "2023-10-27",
+    start_time: "14:00",
+    end_time: "15:00",
+    room_no: "1",
+    max_patients: 5,
+    current_count: 0,
+    is_available: true, 
   },
 ];
