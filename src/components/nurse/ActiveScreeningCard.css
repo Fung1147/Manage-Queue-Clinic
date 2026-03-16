@@ -2,7 +2,7 @@
   background-color: #f0fdfa;
   border: 2px dashed #5eead4;
   border-radius: 8px;
-  padding: 40px;
+  padding: 80px;
   text-align: center;
   color: #0f766e;
 }
@@ -66,23 +66,6 @@
   align-items: flex-end;
 }
 
-.btn-send-doctor {
-  background-color: #f59e0b;
-  color: white;
-  border: none;
-  padding: 15px 25px;
-  border-radius: 8px;
-  font-size: 1.1em;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  height: fit-content;
-}
-
-.btn-send-doctor:hover {
-  background-color: #d97706;
-}
-
 .vitals-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -128,6 +111,24 @@
   border: 1px solid #fca5a5;
 }
 
+.btn-send-doctor {
+  background-color: #f59e0b;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-send-doctor:hover {
+  background-color: #d97706;
+}
+
 .btn-er {
   background-color: #ef4444;
   color: white;
@@ -137,6 +138,7 @@
   font-size: 1.1em;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s;
   width: 100%;
   margin-top: 10px;
 }

@@ -1,0 +1,38 @@
+.doctor-card {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.doctor-card:hover {
+  border-color: #3b82f6;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(59, 130, 246, 0.15);
+}
+
+.doctor-icon {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+}
+
+.doctor-info h4 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  color: #1f2937;
+}
+
+.specialty-badge {
+  display: inline-block;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: 500;
+}

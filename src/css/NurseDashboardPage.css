@@ -1,0 +1,21 @@
+.nurse-dashboard-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Sarabun', sans-serif;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.nurse-section-title {
+  color: #334155;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

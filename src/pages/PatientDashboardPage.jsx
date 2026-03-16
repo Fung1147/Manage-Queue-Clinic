@@ -59,10 +59,10 @@ const PatientDashboardPage = () => {
   }
 
   return (
-    <div className="container">
+    <div className="patient-container">
       <UserHeader name={user.name} />
 
-      <main>
+      <main className="patient-main">
         <CurrentQueueSection
           activeQueue={activeQueue}
           onBookClick={handleBookClick}

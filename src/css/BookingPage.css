@@ -1,161 +1,135 @@
 .booking-container {
-  padding: 20px;
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
-}
-
-.booking-title {
-  margin-bottom: 10px;
-}
-
-.patient-info {
-  margin-bottom: 20px;
-  color: #4b5563;
-}
-
-.schedule-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.schedule-card {
-  border: 2px solid #ccc;
-  padding: 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  background-color: #fff;
-  transition: all 0.2s ease-in-out;
-}
-
-.schedule-card:hover:not(.disabled) {
-  border-color: #93c5fd;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-.schedule-card.selected {
-  background-color: #e0f2fe;
-  border-color: #0284c7;
-}
-
-.schedule-card.disabled {
-  background-color: #f9f9f9;
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-.card-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.time-title {
-  margin: 0 0 5px 0;
+  padding: 20px;
+  font-family: 'Sarabun', sans-serif;
   color: #333;
 }
 
-.schedule-card.disabled .time-title {
-  color: #999;
-}
-
-.doctor-info {
-  margin: 0;
-  color: #666;
-  font-size: 0.95em;
-}
-
-.status-section {
-  text-align: right;
-}
-
-.status-text.closed,
-.status-text.full {
-  color: #dc2626;
-  font-weight: bold;
-}
-
-.status-text.available {
-  color: #16a34a;
-  font-weight: bold;
-}
-
-.count-info {
-  font-size: 0.85em;
-  color: #888;
-  margin-top: 5px;
-}
-
-.confirm-btn {
-  margin-top: 30px;
-  width: 100%;
-  padding: 15px;
+.btn-back {
+  background: none;
   border: none;
-  border-radius: 8px;
-  font-size: 1.1em;
-  font-weight: bold;
-  transition: background-color 0.2s;
-}
-
-.confirm-btn.active {
-  background-color: #0284c7;
-  color: white;
+  color: #6c757d;
+  font-size: 1rem;
   cursor: pointer;
+  padding: 0;
+  margin-bottom: 20px;
+  transition: color 0.2s ease;
 }
 
-.confirm-btn.active:hover {
-  background-color: #0369a1;
+.btn-back:hover {
+  color: #343a40;
+  text-decoration: underline;
 }
 
-.confirm-btn:disabled {
-  background-color: #ccc;
-  color: white;
-  cursor: not-allowed;
+.booking-title {
+  font-size: 1.8rem;
+  margin: 0 0 10px 0;
+  color: #1f2937;
+}
+
+.patient-info {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.step-section {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.doctor-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.schedule-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+  margin-bottom: 40px;
+  align-items: stretch;
+}
+
+.btn-back-step {
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  color: #4b5563;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  transition: all 0.2s;
+}
+
+.btn-back-step:hover {
+  background-color: #e5e7eb;
+  color: #1f2937;
 }
 
 .symptoms-section {
-  margin-bottom: 20px;
-  background-color: #f8fafc;
-  padding: 15px;
+  margin: 20px 0;
+  background: #f8fafc;
+  padding: 16px;
   border-radius: 8px;
   border: 1px solid #e2e8f0;
 }
 
 .symptoms-label {
   display: block;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 8px;
   color: #334155;
 }
 
 .symptoms-input {
   width: 100%;
-  height: 80px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #cbd5e1;
   box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
   font-family: inherit;
-  font-size: 1em;
-  resize: vertical; 
+  min-height: 80px;
+  resize: vertical;
 }
 
 .symptoms-input:focus {
   outline: none;
-  border-color: #0284c7;
-  box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.2);
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
-.btn-back {
-  margin-bottom: 15px;
-  padding: 8px 15px;
+.confirm-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: not-allowed;
+  background-color: #d1d5db;
+  color: #6b7280;
+  transition: all 0.3s ease;
+}
+
+.confirm-btn.active {
+  background-color: #2563eb;
+  color: white;
   cursor: pointer;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  background: #fff;
-  transition: background-color 0.2s;
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
 }
 
-.btn-back:hover {
-  background-color: #f1f5f9;
+.confirm-btn.active:hover {
+  background-color: #1d4ed8;
 }

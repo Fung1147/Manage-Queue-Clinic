@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./ActiveScreeningCard.css";
 
 const ActiveScreeningCard = ({ patient, onSubmitTriage }) => {
-  // 1. State สำหรับ Class Triage
+  // State สำหรับ Class Triage
   const [weight, setWeight] = useState("");
   const [height, setHeight] = useState("");
   const [temperature, setTemperature] = useState("");
@@ -10,7 +10,7 @@ const ActiveScreeningCard = ({ patient, onSubmitTriage }) => {
   const [bloodPressure, setBloodPressure] = useState("");
   const [emergencyLevel, setEmergencyLevel] = useState("Yellow");
 
-  // 2. ล้างค่าฟอร์มเมื่อเปลี่ยนคนไข้
+  // ล้างค่าฟอร์มเมื่อเปลี่ยนคนไข้
   useEffect(() => {
     if (patient) {
       setWeight(""); setHeight(""); setTemperature("");
@@ -18,7 +18,7 @@ const ActiveScreeningCard = ({ patient, onSubmitTriage }) => {
     }
   }, [patient]);
 
-  // 3. Method: calculateBMI
+  // Method: calculateBMI
   const calculateBMI = () => {
     if (weight && height) {
       const hInMeters = parseFloat(height) / 100;

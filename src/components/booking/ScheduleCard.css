@@ -1,0 +1,85 @@
+.schedule-card {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.schedule-card:hover:not(.disabled) {
+  border-color: #60a5fa;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.1);
+}
+
+.schedule-card.selected {
+  border-color: #10b981;
+  background-color: #ecfdf5;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.schedule-card.disabled {
+  background-color: #f9fafb;
+  border-color: #f3f4f6;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.card-content .time-title {
+  margin: 0 0 8px 0;
+  font-size: 1.05rem;
+  color: #111827;
+}
+
+.card-content .doctor-info {
+  margin: 0 0 16px 0;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.status-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px dashed #e5e7eb;
+  padding-top: 12px;
+  font-size: 0.9rem;
+}
+
+.status-text {
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.status-text.available {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.status-text.full, .status-text.closed {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.count-info {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.schedule-date {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 4px; 
+  font-weight: normal;
+}
+
+.schedule-time {
+  font-size: 1.1rem;
+  color: #111827; 
+  font-weight: bold;
+}

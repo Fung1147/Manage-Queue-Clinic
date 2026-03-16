@@ -3,6 +3,7 @@ import { MOCK_QUEUES } from "../services/mockData";
 import NurseHeader from "../components/nurse/NurseHeader";
 import ActiveScreeningCard from "../components/nurse/ActiveScreeningCard";
 import WaitingQueueList from "../components/nurse/WaitingQueueList";
+import "../css/NurseDashboardPage.css";
 
 const NurseDashboardPage = () => {
   const NURSE_NAME = "พยาบาล สมหญิง มือเบา";
@@ -24,6 +25,36 @@ const NurseDashboardPage = () => {
     );
 
     setQueues(updatedQueues);
+  };
+
+  const handleSkipPatient = (queueId) => {
+    const isConfirm = window.confirm("แน่ใจหรือไม่ที่จะ 'ข้าม' คิวนี้?");
+    if (isConfirm) {
+      // เปลี่ยนสถานะเป็น skipped เพื่อให้หายไปจากคิวรอ
+      const updatedQueues = queues.map((q) =>
+        q.queue_id === queueId ? { ...q, status: "skipped" } : q,
+      );
+      setQueues(updatedQueues);
+    }
+  };
+
+  const handleInsertQueue = () => {
+    const isConfirm = window.confirm(
+      "ต้องการแทรกคิวฉุกเฉิน (Walk-in/ER) ใช่หรือไม่?",
+    );
+    if (isConfirm) {
+      // จำลองการสร้างคิวฉุกเฉินแทรกไปเป็นคิวแรกสุด
+      const emergencyQueue = {
+        queue_id: Date.now(), // สร้าง ID จำลอง
+        queue_no: "E999", // รหัสคิวแทรก
+        patient_name: "ผู้ป่วย แทรกคิวฉุกเฉิน",
+        status: "waiting",
+      };
+
+      // เอาคิวใหม่ไปต่อหน้าสุดของ Array
+      setQueues([emergencyQueue, ...queues]);
+      alert("เพิ่มคิวแทรกฉุกเฉิน (E999) เรียบร้อยแล้ว!");
+    }
   };
 
   const handleSaveScreening = (queueId, triageData) => {
@@ -68,7 +99,12 @@ const NurseDashboardPage = () => {
       <h3 className="nurse-section-title">
         🟡 คิวรอเรียกซักประวัติ ({waitingPatient.length} คน)
       </h3>
-      <WaitingQueueList patients={waitingPatient} onCall={handleCallPatient} />
+      <WaitingQueueList
+        patients={waitingPatient}
+        onCall={handleCallPatient}
+        onSkip={handleSkipPatient}
+        onInsert={handleInsertQueue}
+      />
     </div>
   );
 };
