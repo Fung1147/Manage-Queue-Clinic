@@ -10,7 +10,7 @@ const PatientDashboardPage = () => {
 
   const navigate = useNavigate();
 
-  const currentUser = MOCK_USERS.find((u) => u.user_id === 2);
+  const currentUser = MOCK_USERS.find((u) => u.user_id === 4);
 
   const [user, setUser] = useState({
     name: currentUser

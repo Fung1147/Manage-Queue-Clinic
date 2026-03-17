@@ -169,7 +169,7 @@ export const MOCK_QUEUES = [
     first_name: "สมหญิง",
     last_name: "ใจดีมาก",
     symptoms_initial: "ปวดท้องบิดๆ",
-    status: "completed",
+    status: "pending_doctor",
     booked_at: "2023-10-27T08:30:00",
     waiting_count: 0,
     doctor_name: "นพ.รักษา ยาดี",

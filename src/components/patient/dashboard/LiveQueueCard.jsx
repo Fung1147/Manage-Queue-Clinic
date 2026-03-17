@@ -8,9 +8,9 @@ const LiveQueueCard = ({
   roomNo,
   onCancelClick,
 }) => {
-  const isCalling = status === "calling";
+  const isCalling = status === "pending_doctor";
   const statusText = isCalling ? "เชิญเข้าห้องตรวจ" : "รอเรียกคิว";
-  const statusColor = isCalling ? "status-calling" : "status-waiting";
+  const statusColor = isCalling ? "pending_doctor" : "status-waiting";
 
   const AVG_TIME_PER_PATIENT = 15;
   const estWaitTime = waitingCount * AVG_TIME_PER_PATIENT;
@@ -39,7 +39,7 @@ const LiveQueueCard = ({
           </div>
         )}
 
-        {status === "calling" && (
+        {status === "pending_doctor" && (
           <div
             className="queue-wait-count"
             style={{ color: "#dc2626", fontWeight: "bold", marginTop: "10px" }}

@@ -9,7 +9,6 @@ const BookingPage = () => {
   const navigate = useNavigate();
   const currentUser = MOCK_USERS.find((u) => u.user_id === 2);
 
-  // States
   const [selectedDoctor, setSelectedDoctor] = useState(null);
   const [selectedSchedule, setSelectedSchedule] = useState(null);
   const [symptoms, setSymptoms] = useState("");
@@ -60,10 +59,9 @@ const BookingPage = () => {
         ผู้ป่วย: {currentUser?.first_name} {currentUser?.last_name}
       </p>
 
-      {/* ================= ลอจิก 2 ขั้นตอน ================= */}
       {!selectedDoctor ? (
         
-        /* 🔵 STEP 1: หน้าเลือกแพทย์ */
+        /* หน้าเลือกแพทย์ */
         <div className="step-section">
           <h3>1. เลือกแพทย์ที่ต้องการเข้าตรวจ</h3>
           <div className="doctor-cards-grid">
@@ -79,7 +77,7 @@ const BookingPage = () => {
 
       ) : (
 
-        /* 🔵 STEP 2: หน้าเลือกเวลาและอาการ */
+        /* หน้าเลือกเวลาและอาการ */
         <div className="step-section">
           <button className="btn-back-step" onClick={handleBackToDoctorSelection}>
             ⬅️ เปลี่ยนแพทย์

@@ -1,11 +1,12 @@
-import { useState } from "react";
 import "./App.css";
 import PatientDashboardPage from "./pages/PatientDashboardPage";
 import NurseDashboardPage from "./pages/NurseDashboardPage";
 import DoctorDashboardPage from "./pages/DoctorDashboardPage";
 import AdminDashboardPage from "./pages/AdminDashboardPage";
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import BookingPage from "./pages/BookingPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 const DevModeBar = () => {
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ const DevModeBar = () => {
       }}
     >
       <span>🔧 Dev Mode: Switch Role </span>
+      <button onClick={() => navigate("/login")}>Home</button>
       <button onClick={() => navigate("/patient")}>Patient</button>
       <button onClick={() => navigate("/nurse")}>Nurse</button>
       <button onClick={() => navigate("/doctor")}>Doctor</button>
@@ -30,18 +32,20 @@ const DevModeBar = () => {
 };
 
 function App() {
-
   return (
     <BrowserRouter>
       <DevModeBar />
 
       <Routes>
-        <Route path="/" element={<div style={{padding: "20px"}}>Dev Mode ด้านบน 👆</div>}/>
+        <Route path="/" element={<Navigate to="/login" replace />} />
+
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
 
         {/* กลุ่มหน้าของ Patient */}
         <Route path="/patient" element={<PatientDashboardPage />} />
         <Route path="/patient/booking" element={<BookingPage />} />
-        
+
         {/* กลุ่มหน้าของ Role พนักงาน */}
         <Route path="/nurse" element={<NurseDashboardPage />} />
         <Route path="/doctor" element={<DoctorDashboardPage />} />

@@ -1,54 +1,48 @@
-/* --- Container หลัก --- */
 .footer-container {
-  margin-top: 30px; /* เว้นห่างจากส่วนบัตรคิวข้างบน */
-  padding: 0 10px;  /* เว้นขอบซ้ายขวานิดหน่อย */
+  margin-top: 30px; 
+  padding: 0 10px;  
 }
 
-/* --- หัวข้อ (Header) --- */
 .head-footer {
   font-size: 18px;
   font-weight: 700;
-  color: #334155;     /* สีเทาเข้มดูแพง */
-  margin-bottom: 16px; /* เว้นช่องว่างก่อนถึงเมนู */
-  padding-left: 5px;   /* ขยับให้ตรงกับขอบการ์ด */
+  color: #334155;    
+  margin-bottom: 16px; 
+  padding-left: 5px;   
 }
 
-/* --- กล่องรวมเมนู (Grid Layout) --- */
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* แบ่งเป็น 2 คอลัมน์เท่ากัน */
-  gap: 16px; /* ระยะห่างระหว่างปุ่ม */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
-/* --- ตัวปุ่มเมนู (Common Style) --- */
 .menu-item {
   background-color: white;
   border-radius: 12px;
   padding: 20px 15px;
   
   display: flex;
-  flex-direction: column; /* จัดไอคอนกับตัวหนังสือแนวตั้ง */
-  align-items: center;    /* จัดกึ่งกลาง */
+  flex-direction: column;
+  align-items: center;   
   justify-content: center;
   
   border: 1px solid #f1f5f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02); /* เงาบางๆ */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02); 
   cursor: pointer;
-  transition: all 0.2s ease; /* เอฟเฟกต์ตอนกด */
+  transition: all 0.2s ease; 
 }
 
-/* เอฟเฟกต์ตอนเอาเมาส์ชี้ หรือแตะ */
 .menu-item:hover {
-  transform: translateY(-3px); /* ลอยขึ้น */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08); /* เงาเข้มขึ้น */
-  border-color: #bfdbfe; /* ขอบเปลี่ยนสีฟ้าจางๆ */
+  transform: translateY(-3px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08); 
+  border-color: #bfdbfe; 
 }
 
-/* --- ตกแต่งไอคอน --- */
 .menu-item .icon {
   font-size: 28px;
   margin-bottom: 8px;
-  background-color: #f8fafc; /* พื้นหลังวงกลมรองไอคอน */
+  background-color: #f8fafc;
   width: 50px;
   height: 50px;
   line-height: 50px;
@@ -56,14 +50,24 @@
   border-radius: 50%;
 }
 
-/* --- ตกแต่งตัวหนังสือ --- */
 .menu-item span {
   font-size: 14px;
   font-weight: 500;
   color: #475569;
 }
 
-/* --- (Optional) ถ้าอยากให้ Item-2 เด่นกว่า หรือสีต่างกัน --- */
+.item-1 .icon {
+  background-color: #ecfdf5;
+}
+
 .item-2 .icon {
-  background-color: #ecfdf5; /* สีพื้นหลังไอคอนเขียวอ่อน */
+  background-color: #ecfdf5;
+}
+
+.item-3 .icon {
+  background-color: #ecfdf5;
+}
+
+.item-4 .icon {
+  background-color: #ecfdf5;
 }
