@@ -8,6 +8,7 @@ export const MOCK_USERS = [
     email: "thanathorn@email.com",
     phone: "0812345678",
     role: "Patient",
+    allergy: "-"
   },
   {
     user_id: 2,
@@ -18,6 +19,7 @@ export const MOCK_USERS = [
     email: "somying@email.com",
     phone: "0822222222",
     role: "Patient",
+    allergy: "แพ้ยา Penicillin",
   },
   {
     user_id: 3,
@@ -28,6 +30,7 @@ export const MOCK_USERS = [
     email: "mana@email.com",
     phone: "0833333333",
     role: "Patient",
+    allergy: "แพ้ยา Penicillin"
   },
   {
     user_id: 4,
@@ -38,6 +41,7 @@ export const MOCK_USERS = [
     email: "kanok@email.com",
     phone: "0844444444",
     role: "Patient",
+    allergy: "-"
   },
   {
     user_id: 5,
@@ -369,4 +373,18 @@ export const MOCK_SCHEDULES = [
     current_count: 0,
     is_available: true,
   },
+];
+
+export const MOCK_TRIAGES = [
+  {
+    triage_id: 101,
+    nurse_id: 301,
+    queue_id: 1001, 
+    weight: 55.0,
+    height: 160.0,
+    temperature: 37.8,
+    pulse: 95,
+    blood_pressure: "120/80",
+    emergency_level: "Yellow"
+  }
 ];

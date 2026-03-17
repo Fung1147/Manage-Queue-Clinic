@@ -1,68 +1,237 @@
-.empty-state {
-  background-color: #f9fafb;
+/* กรณีที่ยังไม่มีคนไข้เข้าห้อง */
+.empty-patient-card {
+  background: #f8fafc;
   border: 2px dashed #cbd5e1;
-  border-radius: 8px;
-  padding: 40px;
   text-align: center;
-  margin-bottom: 30px;
+  padding: 50px 20px;
+  border-radius: 12px;
   color: #64748b;
-}
-
-.empty-state h3 {
-  margin-top: 0;
-}
-
-.patient-card {
-  background-color: #fff;
-  border: 2px solid #0284c7;
-  border-radius: 8px;
-  padding: 20px;
   margin-bottom: 30px;
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
 }
 
-.patient-card-content {
+.empty-icon {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+}
+
+.empty-patient-card h4 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  color: #334155;
+}
+
+/* กรณีมีคนไข้กำลังตรวจ */
+.current-patient-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-bottom: 30px;
+  border: 1px solid #e2e8f0;
+}
+
+/* ส่วนแสดงข้อมูลผู้ป่วย */
+.patient-info-section {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  background: #f0f9ff;
+  padding: 24px;
+  border-bottom: 1px solid #bae6fd;
+}
+
+.queue-display {
+  background: #0ea5e9;
+  color: white;
+  padding: 20px 25px;
+  border-radius: 12px;
+  text-align: center;
+  margin-right: 24px;
+  min-width: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(14, 165, 233, 0.2);
+}
+
+.queue-display span {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 4px;
+}
+
+.queue-display h1 {
+  margin: 0;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.patient-details {
+  flex: 1;
+}
+
+.patient-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.patient-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #0f172a;
+}
+
+.hn-badge {
+  background: #e2e8f0;
+  color: #475569;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.info-grid {
+  display: flex;
   gap: 20px;
+  margin-bottom: 16px;
+  color: #334155;
 }
 
-.queue-title {
-  margin: 0 0 10px 0;
-  color: #0284c7;
+/* ส่วน Vital Signs */
+.vital-signs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
 }
 
-.patient-name {
-  margin: 0 0 15px 0;
-  color: #333;
-}
-
-.symptoms-box {
-  background-color: #f0f9ff;
-  padding: 15px;
+.vital-item {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 10px 16px;
   border-radius: 8px;
+  border: 1px solid #bae6fd;
+  flex: 1;
+  gap: 12px;
+}
+
+.vital-item .icon {
+  font-size: 1.5rem;
+}
+
+.vital-item small {
+  color: #64748b;
+  font-size: 0.8rem;
+  display: block;
+}
+
+.vital-item p {
+  margin: 2px 0 0 0;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.text-danger {
+  color: #ef4444 !important;
+}
+
+/* ส่วนอาการแพ้ยาและอาการเบื้องต้น */
+.symptoms-box {
+  background: #ffffff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left: 4px solid #f59e0b;
 }
 
 .symptoms-box p {
-  margin: 5px 0 0 0;
-  color: #333;
+  margin: 0 0 6px 0;
+  color: #334155;
 }
 
-.btn-complete {
-  background-color: #10b981;
-  color: white;
-  border: none;
-  padding: 15px 25px;
+.symptoms-box p:last-child {
+  margin: 0;
+}
+
+.allergy-text {
+  color: #ef4444 !important;
+  font-weight: 600;
+}
+
+/* ส่วนฟอร์มของหมอ */
+.medical-record-form {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.medical-record-form h4 {
+  margin: 0 0 8px 0;
+  color: #1e293b;
+  font-size: 1.1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-group.half {
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.required {
+  color: #ef4444;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
   border-radius: 8px;
-  font-size: 1.1em;
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: all 0.2s;
+  background: #f8fafc;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0ea5e9;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+.complete-btn {
+  width: 100%;
+  background: #10b981;
+  color: white;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
-  transition: background-color 0.2s;
-  white-space: nowrap;
+  margin-top: 12px;
+  transition: background 0.2s;
 }
 
-.btn-complete:hover {
-  background-color: #059669;
+.complete-btn:hover:not(:disabled) {
+  background: #059669;
+}
+
+.complete-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
 }

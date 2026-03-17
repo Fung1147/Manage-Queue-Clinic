@@ -1,17 +1,70 @@
 .doctor-header {
-  background-color: #0284c7;
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  background: #ffffff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
 }
 
-.doctor-header-title {
+.header-info h2 {
+  margin: 0 0 6px 0;
+  color: #0369a1;
+}
+
+.header-info p {
   margin: 0;
+  color: #6b7280;
+  font-size: 0.95rem;
 }
 
-.doctor-header-subtitle {
-  margin: 5px 0 0 0;
-  font-size: 1em;
-  opacity: 0.9;
+.header-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.status-badge {
+  background: #dcfce7;
+  color: #166534;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 4px rgba(22, 101, 52, 0.1);
+  width: fit-content; 
+}
+
+.calendar-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  color: #475569;
+  transition: all 0.2s ease;
+}
+
+.calendar-icon-btn:hover {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+  transform: scale(1.05); 
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+}
+
+.calendar-icon-btn:active {
+  transform: scale(0.95);
+}
+
+.calendar-icon {
+  width: 22px;
+  height: 22px;
 }

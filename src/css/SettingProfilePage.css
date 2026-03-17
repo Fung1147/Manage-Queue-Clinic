@@ -1,0 +1,92 @@
+.settings-page {
+  background-color: #f3f4f6;
+  min-height: 100vh;
+  padding: 30px 20px;
+  font-family: 'Sarabun', sans-serif;
+}
+
+.settings-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.settings-header {
+  margin-bottom: 24px;
+}
+
+.settings-header h2 {
+  margin: 10px 0 5px 0;
+  color: #1f2937;
+}
+
+.settings-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.allergy-input {
+  padding: 12px;
+  border: 1px solid #f87171;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.allergy-input:focus {
+  outline: none;
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.help-text {
+  color: #ef4444;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.save-btn {
+  flex: 2;
+  background-color: #10b981;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.save-btn:hover { background-color: #059669; }
+
+.cancel-btn {
+  flex: 1;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cancel-btn:hover { background-color: #e5e7eb; }
+

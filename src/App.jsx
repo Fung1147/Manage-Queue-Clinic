@@ -7,6 +7,8 @@ import { BrowserRouter, Navigate, Route, Routes, useNavigate } from "react-route
 import BookingPage from "./pages/BookingPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import MedicalHistoryPage from "./pages/MedicalHistoryPage";
+import SettingProfilePage from "./pages/SettingProfilePage";
 
 const DevModeBar = () => {
   const navigate = useNavigate();
@@ -45,6 +47,8 @@ function App() {
         {/* กลุ่มหน้าของ Patient */}
         <Route path="/patient" element={<PatientDashboardPage />} />
         <Route path="/patient/booking" element={<BookingPage />} />
+        <Route path="/patient/history" element={<MedicalHistoryPage />} />
+        <Route path="/patient/settings" element={<SettingProfilePage />} />
 
         {/* กลุ่มหน้าของ Role พนักงาน */}
         <Route path="/nurse" element={<NurseDashboardPage />} />

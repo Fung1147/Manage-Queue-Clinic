@@ -1,39 +1,97 @@
-.empty-waiting {
-  color: #64748b;
+.no-waiting {
+  background: #f8fafc;
+  border: 2px dashed #cbd5e1;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
+  border-radius: 12px;
+  color: #64748b;
+  font-size: 1.1rem;
 }
 
-.waiting-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #fff;
-  border-radius: 8px;
+.waiting-list-container {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border: 1px solid #e2e8f0;
 }
 
-.waiting-table th {
-  background-color: #f1f5f9;
-  text-align: left;
-  padding: 12px 15px;
-  color: #333;
+/* ส่วนหัวตาราง */
+.waiting-list-header {
+  display: flex;
+  background: #f8fafc;
+  padding: 16px 20px;
+  border-bottom: 2px solid #e2e8f0;
+  font-weight: bold;
+  color: #475569;
+  font-size: 0.95rem;
 }
 
-.waiting-table td {
-  padding: 12px 15px;
-  border-bottom: 1px solid #e2e8f0;
+/* ส่วนข้อมูลแต่ละแถว */
+.waiting-item {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background-color 0.2s;
 }
 
-.waiting-table tr:last-child td {
+.waiting-item:last-child {
   border-bottom: none;
 }
 
-.waiting-queue-no {
-  font-weight: bold;
-  color: #475569;
+.waiting-item:hover {
+  background-color: #f8fafc;
 }
 
-.waiting-symptoms {
+/* จัดสัดส่วนคอลัมน์ */
+.col-queue { width: 120px; flex-shrink: 0; }
+.col-name { flex: 1; }
+.col-action { width: 150px; text-align: right; flex-shrink: 0; }
+
+.waiting-queue-no {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.waiting-info h4 {
+  margin: 0 0 4px 0;
+  color: #1e293b;
+  font-size: 1.1rem;
+}
+
+.waiting-info p {
+  margin: 0;
   color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* ปุ่มเรียกคิว */
+.call-queue-btn {
+  background-color: #3b82f6; /* สีน้ำเงินแบบพยาบาล */
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+.call-queue-btn:hover:not(:disabled) {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* ถ้าห้องไม่ว่าง ปุ่มจะกดไม่ได้และเป็นสีเทา */
+.call-queue-btn.disabled {
+  background-color: #cbd5e1;
+  color: #64748b;
+  cursor: not-allowed;
+  box-shadow: none;
 }

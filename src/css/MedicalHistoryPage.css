@@ -1,0 +1,111 @@
+.history-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Sarabun', sans-serif;
+}
+
+.history-header {
+  margin-bottom: 24px;
+}
+
+.back-btn {
+  background: none;
+  border: 1px solid #d1d5db;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background: #f3f4f6;
+}
+
+.history-header h2 {
+  margin: 0 0 8px 0;
+  color: #1f2937;
+}
+
+.history-header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.card-header {
+  background: #f8fafc;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.date-badge {
+  font-weight: bold;
+  color: #0369a1;
+}
+
+.record-id {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.data-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-weight: 600;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.value {
+  color: #1f2937;
+  line-height: 1.5;
+  background: #f9fafb;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border-left: 3px solid #d1d5db;
+}
+
+.value.highlight {
+  border-left-color: #ef4444; 
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.value.pre-line {
+  white-space: pre-line;
+}
+
+.value.note {
+  border-left-color: #f59e0b;
+  font-style: italic;
+}

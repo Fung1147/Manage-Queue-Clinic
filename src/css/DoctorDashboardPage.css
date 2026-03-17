@@ -1,0 +1,38 @@
+.doctor-dashboard-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: 'Sarabun', sans-serif;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.section-title {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  color: #1e293b;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.doctor-dashboard-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.doctor-dashboard-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.doctor-dashboard-container::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.doctor-dashboard-container::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
