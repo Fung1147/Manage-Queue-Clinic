@@ -1,11 +1,16 @@
+import { useNavigate } from "react-router-dom";
 import "./DoctorHeader.css";
 
 const DoctorHeader = ({ doctorName }) => {
+
+  const navigate = useNavigate()
+
   const today = new Date().toLocaleDateString('th-TH', {
     year: 'numeric', month: 'long', day: 'numeric'
   });
 
   const handleManageSchedule = () => {
+    navigate("/doctor/schedule")
     alert("🚀 กำลังนำท่านไปยังหน้า... 'จัดการตารางเวรแพทย์' (Schedule Management)");
   };
 

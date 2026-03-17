@@ -9,6 +9,7 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import MedicalHistoryPage from "./pages/MedicalHistoryPage";
 import SettingProfilePage from "./pages/SettingProfilePage";
+import ScheduleManagePage from "./pages/ScheduleManagePage";
 
 const DevModeBar = () => {
   const navigate = useNavigate();
@@ -54,6 +55,7 @@ function App() {
         <Route path="/nurse" element={<NurseDashboardPage />} />
         <Route path="/doctor" element={<DoctorDashboardPage />} />
         <Route path="/admin" element={<AdminDashboardPage />} />
+        <Route path="/doctor/schedule" element={<ScheduleManagePage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -30,7 +30,7 @@ export const MOCK_USERS = [
     email: "mana@email.com",
     phone: "0833333333",
     role: "Patient",
-    allergy: "แพ้ยา Penicillin"
+    allergy: "แพ้ยา Abc"
   },
   {
     user_id: 4,
@@ -52,6 +52,7 @@ export const MOCK_USERS = [
     email: "somchai@email.com",
     phone: "0855555555",
     role: "Patient",
+    allergy: "-"
   },
   {
     user_id: 6,
@@ -62,6 +63,7 @@ export const MOCK_USERS = [
     email: "somsri@email.com",
     phone: "0866666666",
     role: "Patient",
+    allergy: "-"
   },
   {
     user_id: 7,
@@ -72,6 +74,7 @@ export const MOCK_USERS = [
     email: "winai@email.com",
     phone: "0877777777",
     role: "Patient",
+    allergy: "-"
   },
   {
     user_id: 8,
@@ -82,6 +85,7 @@ export const MOCK_USERS = [
     email: "malee@email.com",
     phone: "0888888888",
     role: "Patient",
+    allergy: "แพ้ยา Xyz"
   },
   {
     user_id: 9,
@@ -92,6 +96,7 @@ export const MOCK_USERS = [
     email: "suchart@email.com",
     phone: "0899999999",
     role: "Patient",
+    allergy: "-"
   },
   {
     user_id: 10,
@@ -102,6 +107,7 @@ export const MOCK_USERS = [
     email: "wandee@email.com",
     phone: "0811111111",
     role: "Patient",
+    allergy: "-"
   },
 ];
 
