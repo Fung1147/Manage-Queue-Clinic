@@ -24,7 +24,7 @@ const DevModeBar = () => {
         gap: "10px",
       }}
     >
-      <span>🔧 Dev Mode: Switch Role </span>
+      <span>Dev</span>
       <button onClick={() => navigate("/login")}>Home</button>
       <button onClick={() => navigate("/patient")}>Patient</button>
       <button onClick={() => navigate("/nurse")}>Nurse</button>
