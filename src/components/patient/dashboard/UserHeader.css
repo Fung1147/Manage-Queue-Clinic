@@ -1,29 +1,26 @@
-/* --- Container หลัก --- */
+
 .user-header-container {
-  background-color: rgba(255, 255, 255, 0.95); /* ขาวโปร่งแสงนิดๆ */
-  backdrop-filter: blur(10px); /* เอฟเฟกต์เบลอพื้นหลังเหมือน iOS */
+  background-color: rgba(255, 255, 255, 0.95); 
+  backdrop-filter: blur(10px); 
   
   display: flex;
   justify-content: space-between;
   align-items: center;
   
-  padding: 12px 20px; /* เพิ่มระยะขอบไม่ให้ติดจอเกินไป */
+  padding: 12px 20px; 
   
-  /* Sticky Header: ให้เมนูติดอยู่ข้างบนเวลาเลื่อนดูคิว */
   position: sticky;
   top: 0;
-  z-index: 1000; /* ให้ลอยอยู่เหนือทุกอย่าง */
+  z-index: 1000; 
   
-  /* เงาแบบนุ่มนวล (Soft Shadow) */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid #f1f5f9;
 }
 
-/* --- โลโก้ --- */
 .logo {
   font-size: 20px;
-  font-weight: 800; /* หนาพิเศษ */
-  color: #2563eb;   /* สีน้ำเงินการแพทย์ */
+  font-weight: 800; 
+  color: #2563eb; 
   display: flex;
   align-items: center;
   gap: 8px;
@@ -37,9 +34,8 @@
 .info-user {
   display: flex;
   align-items: center;
-  gap: 12px; /* ระยะห่างระหว่างชื่อกับรูป */
+  gap: 12px; 
   
-  /* เพิ่ม Hover ให้ดูรู้ว่ากดไปดูโปรไฟล์ได้ */
   padding: 4px 8px;
   border-radius: 30px;
   transition: background-color 0.2s;
@@ -47,14 +43,13 @@
 }
 
 .info-user:hover {
-  background-color: #f8fafc; /* พื้นหลังสีเทาจางๆ ตอนเอาเมาส์ชี้ */
+  background-color: #f8fafc; 
 }
 
-/* --- จัดการข้อความชื่อ --- */
 .text-container {
   display: flex;
-  flex-direction: column; /* จัดชื่อให้อยู่บรรทัดล่าง */
-  align-items: flex-end;  /* ชิดขวา */
+  flex-direction: column; 
+  align-items: flex-end;  
 }
 
 .welcome-text {
@@ -71,17 +66,15 @@
 
 /* --- รูปโปรไฟล์ --- */
 .profile-img {
-  width: 48px;  /* ลดขนาดลงนิดนึง 60px ใหญ่ไปสำหรับ Header */
+  width: 48px; 
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
   
-  /* เพิ่มขอบวงแหวน 2 ชั้น ให้ดูมีมิติ */
   border: 2px solid white;
-  box-shadow: 0 0 0 2px #e2e8f0; /* วงแหวนสีเทา */
+  box-shadow: 0 0 0 2px #e2e8f0; 
 }
 
-/* --- (แถม) Badge สำหรับ Dev Mode --- */
 .mode-badge {
   background-color: #fee2e2;
   color: #991b1b;

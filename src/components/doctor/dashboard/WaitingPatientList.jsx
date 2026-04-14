@@ -8,7 +8,6 @@ const WaitingPatientList = ({ patients, onCallQueue, isRoomEmpty }) => {
 
   return (
     <div className="waiting-list-container">
-      {/* สร้าง Header ของตาราง */}
       <div className="waiting-list-header">
         <div className="col-queue">หมายเลขคิว</div>
         <div className="col-name">ชื่อ-นามสกุล (อาการเบื้องต้น)</div>
@@ -18,12 +17,12 @@ const WaitingPatientList = ({ patients, onCallQueue, isRoomEmpty }) => {
       {patients.map((p) => (
         <div className="waiting-item" key={p.queue_id}>
           
-          {/* 🟢 คอลัมน์ที่ 1: หมายเลขคิว และระดับฉุกเฉิน */}
+          {/* คอลัมน์ที่ 1: หมายเลขคิว และระดับฉุกเฉิน */}
           <div className="col-queue">
             <div className="waiting-queue-no">{p.queue_no}</div>
           </div>
           
-          {/* 🟢 คอลัมน์ที่ 2: ข้อมูลผู้ป่วยจากตาราง Patient และอาการจาก Queue */}
+          {/* คอลัมน์ที่ 2: ข้อมูลผู้ป่วยจากตาราง Patient และอาการจาก Queue */}
           <div className="col-name waiting-info">
             <h4>
               {p.first_name} {p.last_name} 
@@ -35,7 +34,7 @@ const WaitingPatientList = ({ patients, onCallQueue, isRoomEmpty }) => {
             
           </div>
           
-          {/* 🟢 คอลัมน์ที่ 3: ปุ่มจัดการ */}
+          {/* คอลัมน์ที่ 3: ปุ่มจัดการ */}
           <div className="col-action">
             <button 
               className={`call-queue-btn ${!isRoomEmpty ? 'disabled' : ''}`}

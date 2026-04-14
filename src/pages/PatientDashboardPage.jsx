@@ -38,7 +38,6 @@ const PatientDashboardPage = () => {
         doctor: myQueue.doctor_name,
         waitingCount: myQueue.waiting_count,
         status: myQueue.status,
-        // ตาราง Schedule
         roomNo: mySchedule ? mySchedule.room_no : "ไม่ระบุ",
       });
     } else {
